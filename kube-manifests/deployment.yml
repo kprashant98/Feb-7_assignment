@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: app1
-          image: kkprashant/jsapp:v1
+          image: kkprashant/jsapp:#{Build.BuildId}#
           ports:
             - containerPort: 80
