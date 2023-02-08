@@ -39,7 +39,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'stacksimplifyazuredevopsgithubacraksapp1internal-1561.default'
+    environment: $(pipeline_environment).$(sub_environment)
     strategy:
       runOnce:
         deploy:
