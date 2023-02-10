@@ -15,6 +15,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
+      name: training-pool
       vmImage: $(vmImageName)
     steps:
     - task: Docker@2
@@ -38,6 +39,7 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     pool:
+      name: training-pool
       vmImage: $(vmImageName)
     environment: $(pipeline_environment).$(sub_environment)
     strategy:
