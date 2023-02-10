@@ -4,8 +4,11 @@ trigger:
 resources:
 - repo: self
 
-  variable:
-    tag: '$(Build.BuildId)'
+variables:
+- group: prashant_var
+- name: tag
+  value: $(Build.BuildId)
+  
   
 
 stages:
