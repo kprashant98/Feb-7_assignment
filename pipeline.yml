@@ -44,7 +44,7 @@ stages:
     pool:
       name: training-pool
       vmImage: $(vmImageName)
-    environment: $(pipeline_environment).$(sub_environment)
+    environment: $(pipeline_environment)
     strategy:
       runOnce:
         deploy:
